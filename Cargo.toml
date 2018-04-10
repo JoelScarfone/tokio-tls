@@ -1,6 +1,6 @@
 [package]
 name = "tokio-tls"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Carl Lerche <me@carllerche.com>",
            "Alex Crichton <alex@alexcrichton.com>"]
 license = "MIT/Apache-2.0"
@@ -22,7 +22,12 @@ futures = "0.1.11"
 native-tls = "0.1"
 tokio-core = "0.1.6"
 tokio-io = "0.1"
-tokio-proto = { version = "0.1", optional = true }
+
+[dependencies.tokio-proto]
+git = "https://github.com/alex/tokio-proto.git"
+version = "0.1"
+rev = "179d62dbf3ae725eaf6a3bcc6f53952f7fe79d80"
+optional = true
 
 [dev-dependencies]
 cfg-if = "0.1"
